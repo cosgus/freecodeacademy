@@ -1,6 +1,5 @@
 from __future__ import annotations
-import math
-
+import math 
 
 class Category: 
     
@@ -78,7 +77,7 @@ def create_spend_chart(category_list:list) -> str:
     footer = create_footer(category_list)
     full_chart = header + table + divider + footer
 
-    return full_chart
+    return full_chart[:-1]
 
 
 def create_table(categories:list)->str:
@@ -102,7 +101,7 @@ def create_table(categories:list)->str:
             else:
                 row += '   '
         
-        table += row + '\n'
+        table += row + ' \n'
     return table
 
             
@@ -121,7 +120,7 @@ def create_footer(categories):
                 footer += f' {category.name[idx]} '
             except IndexError:
                 footer += '   '
-        footer += '\n'
+        footer += ' \n'
     return footer
 
 
