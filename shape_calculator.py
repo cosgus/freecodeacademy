@@ -35,7 +35,7 @@ class Rectangle:
 
         if other.width > self.width or other.height > self.height:
             return 0
-            
+
         fit_x = int(max(other.width, self.width)/min(other.width,self.width))
         fit_y = int(max(other.height, self.height)/min(other.height,self.height))
 
@@ -59,7 +59,9 @@ class Square(Rectangle):
 
     def set_height(self, side):
         self.set_side(side)
+
     def picture(self):
         return self.get_picture()
+        
     def __str__(self):
         return f'Square(side={self.side})'
